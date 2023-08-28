@@ -1,29 +1,28 @@
 import java.math.BigDecimal;
 import java.text.MessageFormat;
 
+// Truck class that extends the Vehicle class (inherits its attributes and methods)
 public class Truck extends Vehicle {
-    public Truck(int year,
-                 String brand,
-                 BigDecimal pricePerDay) {
-        super(year, brand, VehicleType.TRUCK, pricePerDay);
+    // Constructor for Truck class
+    public Truck(int year, String brand, BigDecimal pricePerDay) {
+        // Add constructor code here
+        // Call the constructor of the parent class (Vehicle)
+        // to initialize the common attributes
     }
 
+    // Override method from the parent class (Vehicle)
     @Override
     public void rent(Customer customer, int countOfRentDay) {
-        if (countOfRentDay < DomainConstants.MINIMUM_TRUCK_RENT_DAY_COUNT) {
-            String message = MessageFormat
-                    .format("{0} için minimum kiralama süresi {1} gündür.",
-                            getVehicleType().name(), DomainConstants.MINIMUM_TRUCK_RENT_DAY_COUNT);
-            System.out.println(message);
-            return;
-        }
-        super.rent(customer,countOfRentDay);
+        // Add code here
+        // Check if the rental days are above the minimum limit
+        // If valid, proceed with renting using super.rent(...)
     }
 
+    // Override method from the parent class (Vehicle)
     @Override
     public void returnVehicle() {
-        setAvailable(true);
-        setCustomer(null);
-        setTotalPrice(BigDecimal.ZERO);
+        // Add code here
+        // Mark the vehicle as available
+        // Clear customer and reset total price
     }
 }

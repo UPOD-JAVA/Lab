@@ -1,48 +1,34 @@
 import java.math.BigDecimal;
 
+// Car class that extends the Vehicle class (inherits its attributes and methods)
 public class Car extends Vehicle {
-    private boolean hasChildSeat;
-    private Customer secondCustomer;
+    private boolean hasChildSeat;       // Additional attribute specific to Car class
+    private Customer secondCustomer;    // Additional attribute specific to Car class
 
-    public Car(int year,
-               String brand,
-               BigDecimal pricePerDay,
-               boolean hasChildSeat) {
-        super(year, brand, VehicleType.CAR, pricePerDay);
-        this.hasChildSeat = hasChildSeat;
+    // Constructor for Car class
+    public Car(int year, String brand, BigDecimal pricePerDay, boolean hasChildSeat) {
+        // Add super(...) here
+        // Initialize Car-specific attributes without "this."
     }
 
-    public boolean isHasChildSeat() {
-        return hasChildSeat;
-    }
+    // Getter and setter for hasChildSeat attribute
+    // ...
 
-    public void setHasChildSeat(boolean hasChildSeat) {
-        this.hasChildSeat = hasChildSeat;
-    }
+    // Getter and setter for secondCustomer attribute
+    // ...
 
-    public Customer getSecondCustomer() {
-        return secondCustomer;
-    }
-
-    public void setSecondCustomer(Customer secondCustomer) {
-        this.secondCustomer = secondCustomer;
-    }
-
+    // Override method from the parent class (Vehicle)
     @Override
     public void returnVehicle() {
-        setAvailable(true);
-        setCustomer(null);
-        secondCustomer = null;
-        setTotalPrice(BigDecimal.ZERO);
+        // Add code here
+        // Mark the vehicle as available
+        // Clear both customers and reset total price
     }
 
+    // Method specific to Car class
     public void addSecondCustomer(Customer customer) {
-        if (getCustomer() == customer) {
-            System.out.println("Lütfen farklı bir sürücü seçiniz");
-            return;
-        }
-        this.secondCustomer = secondCustomer;
-        var finalPrice = getTotalPrice().add(BigDecimal.valueOf(100));
-        setTotalPrice(finalPrice);
+        // Add code here
+        // Check if the same customer is already the first driver
+        // Update second customer and adjust the final price
     }
 }

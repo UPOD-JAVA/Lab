@@ -1,20 +1,24 @@
+// Enumeration representing different types of vehicles
 public enum VehicleType {
-    TRUCK(5,"Bu aracı kiralamak için minimum ehliyet yaşı 5'dir."),
-    VAN(4,"Bu aracı kiralamak için minimum ehliyet yaşı 4'dür."),
-    CAR(2,"Bu aracı kiralamak için minimum ehliyet yaşı 2'dir.");
+    TRUCK(/* Add minimum license year */, /* Add error message */),
+    VAN(/* Add minimum license year */, /* Add error message */),
+    CAR(/* Add minimum license year */, /* Add error message */);
 
-    private final int minLicenceYear;
-    private final String errorMessage;
+    private final int minLicenceYear;   // Minimum required license year for this vehicle type
+    private final String errorMessage;  // Error message for license requirement
 
+    // Constructor for VehicleType enum
     VehicleType(int minLicenceYear, String errorMessage) {
         this.minLicenceYear = minLicenceYear;
         this.errorMessage = errorMessage;
     }
 
+    // Get the minimum required license year for this vehicle type
     public int getMinLicenceYear() {
         return minLicenceYear;
     }
 
+    // Get the error message for license requirement
     public String getErrorMessage() {
         return errorMessage;
     }

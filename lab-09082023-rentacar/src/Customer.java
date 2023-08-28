@@ -1,50 +1,31 @@
 import java.util.UUID;
 
+// Customer class representing a customer who can rent vehicles
 public class Customer {
-    private final String customerId;
-    private String name;
-    private String surname;
-    private int licenceYear;
+    private final String customerId;  // Unique identifier for the customer
+    private String name;              // Customer's first name
+    private String surname;           // Customer's last name
+    private int licenceYear;          // Year when the customer got their driving license
 
-    public Customer(String name,
-                    String surname,
-                    int licenceYear) {
-        this.customerId = UUID.randomUUID().toString();
-        this.name = name;
-        this.surname = surname;
-        this.licenceYear = licenceYear;
+    // Constructor for Customer class
+    public Customer(String name, String surname, int licenceYear) {
+        // Add constructor code here
     }
 
+    // Getter for customerId
     public String getCustomerId() {
         return customerId;
     }
 
-    public String getName() {
-        return name;
-    }
+    // Getter and setter for name attribute
+    // ...
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    // Getter and setter for surname attribute
+    // ...
 
-    public String getSurname() {
-        return surname;
-    }
+    // Getter and setter for licenceYear attribute
+    // ...
 
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public int getLicenceYear() {
-        return licenceYear;
-    }
-
-    public void setLicenceYear(int licenceYear) {
-        this.licenceYear = licenceYear;
-    }
-
-    @Override
-    public String toString() {
-        return "CustomerId: " + customerId + " name: " + name;
-    }
+    // Custom string representation of the Customer object
+    // ...
 }
