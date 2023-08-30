@@ -9,4 +9,19 @@ public abstract class Medya {
 
     public abstract String getTur();
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getBaslik() {
+        return baslik;
+    }
+
+    public void setBaslik(String baslik) {
+        this.baslik = baslik;
+    }
 }
