@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.LoggedInController">
+   <children>
+      <Label fx:id="label_welcome" layoutX="238.0" layoutY="23.0" text="Welcome">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font></Label>
+      <Label fx:id="label_fav_la" layoutX="150.0" layoutY="100.0" text="Your favorite LA is Awesome!">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="button_logout" layoutX="199.0" layoutY="185.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="186.0" style="-fx-background-color: #4f0184;" text="Logout" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
